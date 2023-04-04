@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="predictChildHeight();">
+
+</body>
+<script>
+    function predictChildHeight(){
+        let mHeight=parseFloat(window.prompt("Enter Mother's Height "));
+        let fHeight=parseFloat(window.prompt("Enter Father's Height "));
+        let gender=window.prompt("Enter F or M for Gender ");
+        let predictedChildHeight=0;
+        if(gender=='F')
+        {
+            predictedChildHeight=mHeight+fHeight-13;
+            predictedChildHeight=predictedChildHeight/2;
+        }
+        else if(gender=='M')
+        {
+            predictedChildHeight=mHeight+fHeight+13;
+            predictedChildHeight=predictedChildHeight/2;
+        }
+        if(predictedChildHeight!=0)
+        document.write("<h1>Predicted Child Height ="+predictedChildHeight+"cm </h1>")
+        else
+        document.write("<h1>Please enter a valid gender either F or M</h1>")
+
+    }
+</script>
+</html>
